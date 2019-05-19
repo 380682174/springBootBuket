@@ -1,0 +1,17 @@
+target
+*/target
+*.class
+*.project
+*.classpath
+*/.settings
+**/test/java/META-INF/
+.idea
+*.iml
+data.db
+*.log
+log
+data
+TMP_DIR
+/.mvn/
+/mvnw
+/mvnw.cmd
