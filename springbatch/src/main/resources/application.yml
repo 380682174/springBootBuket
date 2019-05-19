@@ -1,0 +1,12 @@
+###################  spring配置  ###################
+spring:
+  batch:
+    job:
+      enabled: false
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3309/springbatch?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: sys5tem21@bo#1
+
