@@ -2,6 +2,8 @@ package cn.fish.springbatch.bean;
 
 import lombok.Data;
 
+import javax.validation.constraints.Size;
+
 /**
  * @Description:
  * @Author devin.jiang
@@ -12,17 +14,13 @@ public class UserBean {
 
     private Integer id;
 
-    private String userName;
+    @Size(min = 2,max = 4)
+    private String name;
 
-    private String password;
+    private String address;
 
-    private String sex;
+    private String nation;
 
     private Integer age;
-
-    private String phoneNo;
-
-    private String email;
-
 
 }

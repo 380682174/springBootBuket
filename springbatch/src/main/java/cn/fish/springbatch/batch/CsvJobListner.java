@@ -1,33 +1,29 @@
-package cn.fish.springbatch.patch;
+package cn.fish.springbatch.batch;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
+import org.springframework.stereotype.Component;
 
 /**
  * @Description:
  * @Author devin.jiang
- * @CreateDate 2019/5/11 21:58
+ * @CreateDate 2019/5/11 21:34
  */
-@Slf4j
-public class CsvJobListener implements JobExecutionListener {
+@Component
+public class CsvJobListner implements JobExecutionListener {
 
-    private long startTime;
-    private long endTime;
-
+    long startTime;
+    long endTime;
     @Override
     public void beforeJob(JobExecution jobExecution) {
-
         startTime = System.currentTimeMillis();
-        log.info("任务处理开始");
-
+        System.out.println("任务处理开始");
     }
 
     @Override
     public void afterJob(JobExecution jobExecution) {
-
         endTime = System.currentTimeMillis();
-        log.info("任务处理结束，总耗时=" + (endTime - startTime) + "ms");
-
+        System.out.println("任务结束");
+        System.out.println("耗时："+(endTime-startTime)+"ms");
     }
 }

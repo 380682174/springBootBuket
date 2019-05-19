@@ -1,12 +1,13 @@
-###################  spring配置  ###################
 spring:
-  batch:
-    job:
-      enabled: false
-
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3309/springbatch?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3309/springbatch?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: root
-    password: sys5tem21@bo#1
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true
+  batch:
+    job:
+      enabled: true
+      names: importJob,importJob2
 
